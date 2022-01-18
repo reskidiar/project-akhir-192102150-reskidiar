@@ -22,15 +22,13 @@ export class DivisionComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.router.navigate(['/divisi'])
-          .then(() => {
-            window.location.reload();
-          });
+          this.router.navigate(['/dashboard']);
         },
         error => {
           console.log(error);
         });
   }
+
   retrieveDivision():void{
     this.divisionService.getAll()
       .subscribe(
